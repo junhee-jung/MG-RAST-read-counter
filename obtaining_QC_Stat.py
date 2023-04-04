@@ -7,8 +7,9 @@ Created on Wed Jan 11 15:04:22 2023
 
 
 #This script use  MG rast API to request and get the QC stats 
-#using multiprocessing it uses more than 1 core ( I think) which greatly increases the speed as it relies a very simple loop to get information from website api-ui.mg-rast.org
+#using multiprocessing it uses more than 1 core which greatly increases the speed as it relies a very simple loop to get information from website api-ui.mg-rast.org
 #it saves the API request result as JSON file as well as writing down "summary" in CSV file
+#also the script save output as json
 
 import pandas as pd 
 import json
@@ -34,7 +35,7 @@ def QC_stat(i):
         print (k+".json")
         df = pd.read_json(json_url, typ='series')
         qc_file.write(j+","+k+","+str(df["total"])+","+str(df["known_prot"])+","+str(df["known_rna"])+","+str(df["unknown"])+","+str(df["unknown_prot"])+","+str(df["failed_qc"])+"\n")
-        df.to_json(k+".json")
+        #df.to_json(k+".json") #remove "#" if you want the file to be saved 
         qc_file.close()
 if __name__ == '__main__':
     pool = Pool( #whatever number you want < your max thread)  
