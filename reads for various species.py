@@ -34,8 +34,6 @@ for i in A:
     """
     as loop continues I wanted to make sure that all the variable becomes 0
     the rest are converting web request into HTML block which is in JSON format (from mg-rast) which is converted into JSON
-    and using simple loop going which JSON blocks? I am not familar which JSON or HTML terms apologies
-    and once one with same "word" is found it obtains value as format goes (name , value)
     """
     if "submission" in html:
         pass
