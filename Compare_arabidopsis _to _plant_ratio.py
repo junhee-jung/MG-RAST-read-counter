@@ -6,10 +6,7 @@ Created on Tue Mar  7 13:48:41 2023
 """
 #this script is similar to other script that uses simple loop to request api-ui.mg-rast.org for information
 #requires that you have list of file and their MG-rast ID
-#multithreading via multiprocessing import Pool did not work so well therefore from concurrent import futures is used not sure how exactly it works but it is faster
 #the idea of this script is one can compare how much of the read belong to Arabidopsis compared to other plants (i.e. Streptophyta) 
-#N.B. Arabidopsis is already prefiltered on the settings
-#Script requests an html page which obtain is converted to JSON file which is converted to some sort of dataframe? and loop is used to obtain the species / whatever we wanted to obtain
 #no output file using ">" is enough
 
 
@@ -27,7 +24,7 @@ def aphid_annot(i):
         j=i.split("\t")[0]
         k=i.split("\t")[1]
         #print (j,k)
-        url="https://api-ui.mg-rast.org/metagenome/"+j+"?verbosity=stats&detail=taxonomy&auth=YourTokenhere"
+        url="https://api-ui.mg-rast.org/metagenome/"+j+"?verbosity=stats&detail=taxonomy&auth=YourTokenhere" #you need to put your token here
         page = urlopen(url)
         html_bytes = page.read()
         html = html_bytes.decode("utf-8")
