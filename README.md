@@ -1,20 +1,20 @@
 # MG RAST read counter
 
 The aim of these script is to pull the variable that one want to obtain using MG-rast API
-By default the output from MG-RAST API is JSON which due to my limited knowledge rely on a "for loop" to obtain relavant information
+By default the output from MG-RAST API is JSON the script rely on a "for loop" to find relavant information
 
 Most of the file follow very similar patterns important things to adjust to ones needs are:
 
 - &auth=YourTokenhere - you need to add your own mg-rast webkey which is found My Profile (button on mg rast webpage "human icon") -> press "show webkey"
 
-- The script relies on there being a file with list of MG-rast ID and name etc which can be found My studies (DNA icon) -> "export table data as CSV" although the output is CSV file, in reality it is more of TSV (tab sperated) file which python scirpt treat it as TSV.
+- The script relies on there being a file with list of MG-rast ID (34 character file) and name etc which can be found My studies (DNA icon) -> "export table data as CSV" although the output is ".CSV file", in reality it is more of TSV (tab sperated) file which python scirpt treat it as TSV.
 
 there are 3 scripts:
 
-1) Compare_arabidopsis _to _plant_ratio.py -> we wanted to know how much of the plants were "Arabidopsis" in our case Arabidopsis ≈ Thlaspi for some reason MG-RAST does not provide Kingdom level taxanomy under this API so we are are left to be satisfied with only "Streptophyta" at phylum level so in theory SOME plants may have been omitted
+1) Compare_arabidopsis_to _plant_ratio.py -> we wanted to know how much of the plants were "Arabidopsis" in our case Arabidopsis ≈ Thlaspi for some reason MG-RAST does not provide Kingdom level taxanomy under this API so we are are left to be satisfied with only "Streptophyta" at phylum level so in theory SOME plants may have been omitted
   
-2) obtaining_QC_Stat.py -> we wanted to get what the ratio between acceptable read vs rejected reads were. As out reads were based on " Trash" sequence. We were unsure in the beginning how many reads were rejected due to poor quality or being "exogenous". some of the script used here is recycled in reads for various species.py
+2) obtaining_QC_Stat.py -> we wanted to get what the ratio between acceptable read vs rejected reads were. As out reads were based on " Trash" sequence. We were unsure in the beginning how many reads were rejected due to poor quality or being "exogenous". reads for various species.py also provide same function. 
 
-3) reads for various species.py -> the script works but is very messy. total=unknownp=unknown=knwonr=knownp=unknown=failedq=homo=buch=aphid=bra=euk=vir=bact=arch=0  act as a safety buffer where new file old values are not carried over. If one wants to convert this into their own script simply find which taxonomic rank and change value in "if". (e.g. if "Homo" in j: which look for human read can change into "gallus" if you want to find chicken reads etc.)
+3) reads for various species.py -> the script works but is very messy. If one wants to convert this into their own script simply find which taxonomic rank and change value in "if". (e.g. if "Homo" in j: which look for human read can change into "gallus" if you want to find chicken reads etc.)
 
-Any questions feel free to email me or Dario
+
