@@ -1,7 +1,7 @@
 # MG RAST read counter
 
-The aim of these script is to pull the variable that one want to obtain using MG-rast API
-By default the output from MG-RAST API is JSON the script rely on a "for loop" to find relavant information
+The aim of these script is to pull the variable that one want to obtain using (MG-rast)[https://www.mg-rast.org/] API.
+By default the output from (MG-rast)[https://www.mg-rast.org/] API is JSON the script relies on a "for loop" to find relavant information
 
 Most of the file follow very similar patterns important things to adjust to ones needs are:
 
