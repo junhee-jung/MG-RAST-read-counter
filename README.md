@@ -7,7 +7,7 @@ Most of the file follow very similar patterns important things to adjust to ones
 
 - &auth=YourTokenhere - you need to add your own mg-rast webkey which is found My Profile (button on mg rast webpage "human icon") -> press "show webkey"
 
-- The script relies on there being a file with list of MG-rast ID (34 character file) and name etc which can be found My studies (DNA icon) -> "export table data as CSV" although the output is ".CSV file", in reality it is more of TSV (tab sperated) file which python scirpt treat it as TSV.
+- The script relies on there being a file with list of MG-rast ID (34 character file) and name etc which can be found My studies (DNA icon) -> "export table data as CSV" although the output is ".CSV file", in reality it is more of TSV (tab sperated) file which python script treats as TSV.
 
 there are 3 scripts:
 
