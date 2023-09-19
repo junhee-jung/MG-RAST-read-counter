@@ -2,7 +2,7 @@
 """
 Created on Tue Mar  7 13:48:41 2023
 
-@author: bbmju01
+@author: Junhee
 """
 #this script is similar to other script that uses simple loop to request api-ui.mg-rast.org for information
 #requires that you have list of file and their MG-rast ID
