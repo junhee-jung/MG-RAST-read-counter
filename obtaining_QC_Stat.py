@@ -38,7 +38,7 @@ def QC_stat(i):
         #df.to_json(k+".json") #remove "#" if you want the file to be saved 
         qc_file.close()
 if __name__ == '__main__':
-    pool = Pool( #whatever number you want < your max thread)  
+    pool = Pool( "#whatever number you want < your max thread")  
     pool.map(QC_stat, cwd) 
 
 
