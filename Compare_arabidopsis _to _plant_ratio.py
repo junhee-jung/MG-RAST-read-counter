@@ -46,5 +46,5 @@ def aphid_annot(i):
 
     
 if __name__ == '__main__':
-    with futures.ThreadPoolExecutor(4) as executor:
+    with futures.ThreadPoolExecutor("#whatever number you want < your max thread") as executor:
         executor.map(aphid_annot, cwd)
