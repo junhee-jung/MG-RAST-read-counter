@@ -2,7 +2,7 @@
 """
 Created on Fri Mar 19 13:39:28 2021
 
-@author: bbmju01
+@author: Junhee
 """
 from urllib.request import urlopen
 import json
