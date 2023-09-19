@@ -5,9 +5,12 @@ By default the output from [MG-rast](https://www.mg-rast.org/) API is JSON. The 
 
 Most of the files follow very similar patterns important things to adjust to ones needs are:
 
-- &auth=YourTokenhere - you need to add your own mg-rast webkey which is found My Profile (button on mg rast webpage "human icon") -> press "show webkey"
+- `&auth=YourTokenhere` - you need to add your own mg-rast webkey which is found My Profile (button on mg rast webpage "human icon") -> press "show webkey"
 
 - The script relies on there being a file with list of MG-rast ID (34 character file) and name etc which can be found My studies (DNA icon) -> "export table data as CSV" although the output is ".CSV file", in reality it is more of TSV (tab sperated) file which python script treats as TSV.
+  
+- Some script use rudimentary multi-threading to allow multiple files to be downloaded at the same time (otherwise the process takes too long) under `#whatever number you want < your max thread) ` enter the number of threads you want to use
+  - For some reason `from multiprocessing import Pool` may not work (it stopped working for some reason in my PC - in that case use `from concurrent import futures`
 
 there are 3 scripts:
 
