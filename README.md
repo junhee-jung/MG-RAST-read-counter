@@ -15,6 +15,6 @@ there are 3 scripts:
   
 2) [obtaining_QC_Stat.py](https://github.com/junhee-jung/MG-RAST-read-counter/blob/main/obtaining_QC_Stat.py) -> we wanted to get what the ratio between acceptable read vs rejected reads were. As out reads were based on " Trash" sequence. We were unsure in the beginning how many reads were rejected due to poor quality or being "exogenous". reads for various species.py also provide same function. 
 
-3) reads for various species.py -> the script works but is very messy. If one wants to convert this into their own script simply find which taxonomic rank and change value in "if". (e.g. if "Homo" in j: which look for human read can change into "gallus" if you want to find chicken reads etc.)
+3) [reads_for_various_species.py](https://github.com/junhee-jung/MG-RAST-read-counter/blob/main/reads_for_various_species.py) -> the script works but is very messy. If one wants to convert this into their own script simply find which taxonomic rank and change value in "if". (e.g. if "Homo" in j: which look for human read can change into "gallus" if you want to find chicken reads etc.)
 
 
